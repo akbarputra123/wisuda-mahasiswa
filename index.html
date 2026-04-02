@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Undangan Digital</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/pertama.css">
+  <link rel="stylesheet" href="css/kedua.css">
+  <link rel="stylesheet" href="css/tiga.css">
+  <link rel="stylesheet" href="css/empat.css">
+</head>
+
+<body>
+
+  <!-- MUSIC -->
+  <audio id="bg-music" src="assets/sound/sound.mp3" loop></audio>
+
+  <!-- WRAPPER (PENTING BIAR TIDAK TABRAKAN) -->
+  <div class="main-wrapper">
+
+    <!-- ================= PAGE 1 ================= -->
+    <section id="page1" class="page active">
+      <div class="container fade-in">
+
+        <div class="top">
+          <h2 class="title">Akhirnya Ia Berhasil!</h2>
+
+          <div class="photo">
+            <img src="assets/foto1.jpg">
+          </div>
+
+          <h1 class="name">Astriani M. Rani, S.H</h1>
+          <p class="kampus">Universitas Khairun</p>
+          <p class="jurusan">S1 Ilmu Hukum - Cum Laude.</p>
+        </div>
+
+        <div class="bottom">
+          <div class="divider"></div>
+
+          <p class="invite">
+            Mengundang Dengan Hormat, Menghadiri Syukuran Wisuda
+            Kepada Bpk / Ibu / Sdr/i
+          </p>
+
+          <h3 class="guest">Tamu Undangan</h3>
+          <p class="place">Ditempat</p>
+
+          <button class="btn-open" onclick="bukaUndangan()">
+            Buka Undangan
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= PAGE 2 ================= -->
+    <section id="page2" class="page hidden-page">
+      <div class="page2">
+
+        <div class="image-frame">
+          <div class="content">
+            <div class="text-container">
+
+              <p class="small">Hai, Astriani M. Rani!</p>
+              <h1 class="title2">Selamat Wisuda</h1>
+
+              <div class="line"></div>
+
+              <p class="sub">Anak, Kakak & Adik Kami</p>
+
+              <h2 class="name2">Astriani M. Rani, S.H</h2>
+
+              <p class="desc">
+                Yang telah menyelesaikan pendidikan <br>
+                S1 Ilmu Hukum - Cum Laude <br>
+                di Universitas Khairun
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= PAGE 3 ================= -->
+    <section id="page3" class="page hidden-page">
+      <div class="page3">
+
+        <div class="event-container">
+
+          <div class="icon-top">🔔</div>
+
+          <p class="invite-text">You're Invited To:</p>
+          <h1 class="event-title">Graduation Ceremony</h1>
+
+          <div class="event-info">
+            <div class="info-item">
+              <span>📅 Sabtu, 11 April 2026</span>
+            </div>
+            <div class="info-item">
+              <span>⏰ 12.00 WIT - Selesai</span>
+            </div>
+          </div>
+
+      <div class="location">
+
+  <a href="https://www.google.com/maps?q=0.7959526181221008,127.37061309814453&z=17&hl=en" 
+     target="_blank" 
+     class="map-button">
+
+    <img src="assets/peta.png" alt="Lokasi" class="map-img">
+
+  </a>
+
+  <h3>Kelurahan Moya</h3>
+
+</div>
+
+          <div class="divider2"></div>
+
+
+          <!-- GRID -->
+          <div class="protocol-grid">
+
+            <div class="protocol-card">
+              <div class="protocol-icon">😷</div>
+              <p>Gunakan masker</p>
+            </div>
+
+            <div class="protocol-card">
+              <div class="protocol-icon">🧴</div>
+              <p>Gunakan sanitizer</p>
+            </div>
+
+            <div class="protocol-card">
+              <div class="protocol-icon">↔️</div>
+              <p>Jaga jarak</p>
+            </div>
+
+            <div class="protocol-card">
+              <div class="protocol-icon">🤝</div>
+              <p>Hindari kontak</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+  <!-- ================= PAGE 4 ================= -->
+<section id="page4" class="page hidden-page">
+  <div class="page4">
+
+    <div class="ucapan-container">
+
+      <h2 class="ucapan-title">Berikan Doa Dan Ucapan Terbaik Anda</h2>
+
+    <form class="ucapan-form" id="ucapanForm">
+
+  <div class="row">
+    <div class="input-group">
+      <label>Nama Lengkap</label>
+      <input type="text" id="nama" placeholder="Nama Anda">
+    </div>
+
+    <div class="input-group">
+      <label>No. HP</label>
+      <input type="text" id="hp" placeholder="08xxxxxxxxxx">
+    </div>
+  </div>
+
+  <div class="input-group full">
+    <label>Kirim Ucapan & Doa</label>
+    <textarea id="ucapan" rows="4" placeholder="Tulis ucapan..."></textarea>
+  </div>
+
+  <button type="submit" class="btn-kirim">
+    KIRIM UCAPAN
+  </button>
+
+</form>
+
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>

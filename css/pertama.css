@@ -1,0 +1,183 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh; /* 🔥 fix mobile */
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  background: radial-gradient(circle at center, #fde2e4, #fbcfe8);
+  font-family: 'Segoe UI', sans-serif;
+}
+body.scroll-active {
+  overflow-y: auto; /* ⬅️ baru bisa scroll */
+}
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+/* CONTAINER ARCH */
+.container {
+  width: 360px;
+margin: 0 auto;
+  height: 100dvh; /* 🔥 ganti dari 100vh */
+  max-height: 100dvh;
+
+  background: linear-gradient(180deg, #fff1f2, #fbcfe8);
+  border-radius: 180px 180px 0 0;
+
+  text-align: center;
+  position: relative;
+  color: #6b2c3e;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  box-shadow: 0 10px 30px rgba(236, 72, 153, 0.2);
+}
+html, body {
+  height: 100%;
+}
+
+/* ORNAMEN */
+.container::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 50%;
+  top: -250px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  top: -320px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* WRAPPER */
+.top {
+  padding: 30px 25px 0;
+}
+
+
+
+/* TITLE */
+.title {
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+/* FOTO */
+.photo {
+  width: 160px;
+  height: 230px;
+  margin: 15px auto;
+  overflow: hidden;
+  border-radius: 100px 100px 10px 10px;
+  border: 3px solid #f9a8d4;
+  background: white;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* NAMA */
+.name {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* TEXT */
+.kampus {
+  font-size: 14px;
+}
+
+.jurusan {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* DIVIDER */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(0,0,0,0.1);
+  margin: 20px 0;
+}
+
+/* INVITE */
+.invite {
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 0 25px;
+}
+
+.guest {
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.place {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+.btn-open {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 8px 14px;
+  margin: 15px auto 20px;
+
+  background: transparent;
+
+  border: none;
+  border-top: 1px solid rgba(249, 168, 212, 0.8);
+  border-bottom: 1px solid rgba(249, 168, 212, 0.5);
+
+  color: #be185d;
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: 0.3s;
+
+  /* shadow halus */
+  box-shadow: 0 4px 10px rgba(236, 72, 153, 0.15);
+}
+
+/* ICON */
+.btn-open::before {
+  content: "✉";
+  font-size: 14px;
+  color: #ec4899;
+}
+
+/* HOVER */
+.btn-open:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(236, 72, 153, 0.25);
+}
+.bottom {
+  padding-bottom: 20px;
+}
