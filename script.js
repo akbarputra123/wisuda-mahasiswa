@@ -66,7 +66,7 @@ document.getElementById("ucapanForm").addEventListener("submit", function(e) {
   }
 
   // nomor tujuan (pakai format internasional TANPA 0)
-  const nomorTujuan = "6282197480491";
+  const nomorTujuan = "6282188988853";
 
   // format pesan
   const pesan = `Halo, saya ${nama}%0A
