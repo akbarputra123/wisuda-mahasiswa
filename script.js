@@ -42,7 +42,7 @@ window.onload = () => {
 
     if (guestElement) {
       const namaRapi = formatNama(decodeURIComponent(nama));
-      guestElement.innerText = "Bpk/Ibu " + namaRapi;
+      guestElement.innerText =  namaRapi;
     }
   }
 
