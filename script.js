@@ -12,6 +12,13 @@ function getNamaTamu() {
   return params.get("to");
 }
 
+// ================= FORMAT NAMA =================
+function formatNama(nama) {
+  return nama
+    .toLowerCase()
+    .replace(/\b\w/g, c => c.toUpperCase());
+}
+
 // ================= SAAT HALAMAN LOAD =================
 window.onload = () => {
   // kembali ke atas
@@ -31,8 +38,12 @@ window.onload = () => {
   const nama = getNamaTamu();
 
   if (nama) {
-    document.getElementById("guestName").innerText =
-      "Kepada Yth. " + decodeURIComponent(nama);
+    const guestElement = document.getElementById("guestName");
+
+    if (guestElement) {
+      const namaRapi = formatNama(decodeURIComponent(nama));
+      guestElement.innerText = "Bpk/Ibu " + namaRapi;
+    }
   }
 
   // ================= EVENT FORM =================
@@ -42,9 +53,9 @@ window.onload = () => {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const nama = document.getElementById("nama").value;
-      const hp = document.getElementById("hp").value;
-      const ucapan = document.getElementById("ucapan").value;
+      const nama = document.getElementById("nama").value.trim();
+      const hp = document.getElementById("hp").value.trim();
+      const ucapan = document.getElementById("ucapan").value.trim();
 
       if (!nama || !hp || !ucapan) {
         alert("Harap isi semua data!");
@@ -79,14 +90,15 @@ function bukaUndangan() {
 
   const page2 = document.getElementById("page2");
 
-  // tampilkan halaman 2
-  page2.style.display = "block";
+  if (page2) {
+    page2.style.display = "block";
 
-  setTimeout(() => {
-    page2.classList.add("show-page");
+    setTimeout(() => {
+      page2.classList.add("show-page");
 
-    page2.scrollIntoView({
-      behavior: "smooth"
-    });
-  }, 100);
+      page2.scrollIntoView({
+        behavior: "smooth"
+      });
+    }, 100);
+  }
 }

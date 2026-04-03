@@ -181,3 +181,22 @@ html, body {
 .bottom {
   padding-bottom: 20px;
 }
+
+.guest-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #6b2d2d;
+}
+
+.place {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-top: 5px;
+}
+
+.guest-name {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 5px;
+  color: #333;
+}
