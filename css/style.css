@@ -8,7 +8,7 @@
 /* ================= ROOT FIX MOBILE ================= */
 html, body {
   height: 100%;
-  overflow: hidden; /* 🔥 kunci awal */
+  overflow: hidden;
 }
 
 /* ================= BODY ================= */
@@ -17,7 +17,8 @@ body {
   background: radial-gradient(circle at center, #fde2e4, #fbcfe8);
   color: #6b2c3e;
 
-  min-height: 100dvh; /* 🔥 FIX MOBILE (ganti 100vh) */
+  min-height: 100dvh;
+  overscroll-behavior: none;
 }
 
 /* aktif setelah klik */
@@ -28,38 +29,44 @@ body.scroll-active {
 /* ================= WRAPPER ================= */
 .main-wrapper {
   width: 100%;
-  height: 100dvh; /* 🔥 penting */
+  height: 100dvh;
+
   position: relative;
-  overflow: hidden;
+
+  /* 🔥 SCROLL AKTIF */
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+
+  /* 🔥 SNAP SCROLL */
+  scroll-snap-type: y mandatory;
 }
 
 /* ================= PAGE SYSTEM ================= */
 .page {
-  position: absolute;
-  top: 0;
-  left: 0;
-
   width: 100%;
-  height: 100dvh; /* 🔥 fix mobile */
+  height: 100dvh;
 
-  display: none;
-}
-
-/* hanya halaman aktif */
-.page.active {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  scroll-snap-align: start;
+
+  /* 🔥 animasi page */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease;
 }
 
-/* hidden page */
+/* halaman aktif */
+.page.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* hidden awal */
 .hidden-page {
-  display: none !important;
-}
-
-/* extra safety */
-.page:not(.active) {
-  display: none;
+  display: flex;
 }
 
 /* ================= FONT ================= */
@@ -83,7 +90,7 @@ body.scroll-active {
   font-family: 'Poppins', sans-serif;
 }
 
-/* ================= ANIMASI ================= */
+/* ================= ANIMASI GLOBAL ================= */
 .fade-in {
   animation: fadeIn 1s ease forwards;
 }
@@ -99,26 +106,65 @@ body.scroll-active {
   }
 }
 
+/* ================= REVEAL ANIMATION ================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* kiri */
+.reveal-left {
+  transform: translateX(-80px);
+}
+.reveal-left.active {
+  transform: translateX(0);
+}
+
+/* kanan */
+.reveal-right {
+  transform: translateX(80px);
+}
+.reveal-right.active {
+  transform: translateX(0);
+}
+
+/* zoom */
+.reveal-zoom {
+  transform: scale(0.8);
+}
+.reveal-zoom.active {
+  transform: scale(1);
+}
+
+/* ================= PAGE TRANSITION ================= */
+.page {
+  will-change: transform, opacity;
+}
+
 /* ================= RESPONSIVE FIX ================= */
 .page1,
 .page2,
-.page3 {
+.page3,
+.page4 {
   width: 100%;
-  height: 100dvh; /* 🔥 bukan 100vh */
+  height: 100dvh;
 }
 
 /* center konten */
 .page1 .container,
 .page2 .content,
-.page3 .event-container {
+.page3 .event-container,
+.page4 .ucapan-container {
   margin: 0 auto;
 }
 
 /* ================= ANTI BUG MOBILE ================= */
 html {
   overflow-x: hidden;
-}
-
-body {
-  overscroll-behavior: none;
 }

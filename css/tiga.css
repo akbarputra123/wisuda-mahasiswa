@@ -265,3 +265,130 @@
 .map-button:active {
   transform: scale(0.95);
 }
+
+/* ================= ANIMASI PAGE 3 ================= */
+
+/* naik elegan */
+@keyframes riseUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* zoom halus */
+@keyframes zoomSoft {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* fade */
+@keyframes fadeSmooth {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* icon masuk dulu baru goyang */
+@keyframes bellIntro {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(0);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1) rotate(10deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+.event-container {
+  opacity: 0;
+  transform: translateY(50px);
+
+  animation: riseUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.icon-top {
+  font-size: 38px;
+  margin-bottom: 6px;
+  color: #ec4899;
+
+  animation: bellIntro 0.8s ease forwards,
+             bell 2s infinite ease-in-out 1s; /* lanjut goyang */
+}
+
+.invite-text {
+  opacity: 0;
+  animation: riseUp 0.8s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.event-title {
+  opacity: 0;
+  animation: zoomSoft 1s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.event-info {
+  opacity: 0;
+  animation: riseUp 0.8s ease forwards;
+  animation-delay: 1s;
+}
+
+.map-button {
+  opacity: 0;
+  transform: scale(0.8);
+
+  animation: zoomSoft 0.8s ease forwards;
+  animation-delay: 1.2s;
+}
+
+
+.location {
+  opacity: 0;
+  animation: riseUp 0.8s ease forwards;
+  animation-delay: 1.4s;
+}
+
+.divider2 {
+  opacity: 0;
+  animation: fadeSmooth 0.8s ease forwards;
+  animation-delay: 1.6s;
+}
+
+.nama, .kampus, .jurusan {
+  opacity: 0;
+  animation: riseUp 0.8s ease forwards;
+  animation-delay: 1.8s;
+}
+
+.note {
+  opacity: 0;
+  animation: riseUp 0.8s ease forwards;
+  animation-delay: 2s;
+}
+.protocol-card {
+  opacity: 0;
+  transform: translateY(20px);
+
+  animation: riseUp 0.6s ease forwards;
+}
+
+/* delay per card */
+.protocol-card:nth-child(1) { animation-delay: 2.2s; }
+.protocol-card:nth-child(2) { animation-delay: 2.4s; }
+.protocol-card:nth-child(3) { animation-delay: 2.6s; }
+.protocol-card:nth-child(4) { animation-delay: 2.8s; }

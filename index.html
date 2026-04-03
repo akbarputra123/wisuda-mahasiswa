@@ -2,9 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Undangan Digital</title>
 
   <!-- FONT -->
@@ -22,17 +20,16 @@
   <!-- MUSIC -->
   <audio id="bg-music" src="assets/sound/sound.mp3" loop></audio>
 
-  <!-- WRAPPER (PENTING BIAR TIDAK TABRAKAN) -->
   <div class="main-wrapper">
 
     <!-- ================= PAGE 1 ================= -->
     <section id="page1" class="page active">
       <div class="container fade-in">
 
-        <div class="top">
+        <div class="top reveal">
           <h2 class="title">Akhirnya Ia Berhasil!</h2>
 
-          <div class="photo">
+          <div class="photo reveal-zoom">
             <img src="assets/1.jpeg">
           </div>
 
@@ -41,18 +38,18 @@
           <p class="jurusan">S1 Ilmu Hukum - Cum Laude.</p>
         </div>
 
-        <div class="bottom">
+        <div class="bottom reveal">
           <div class="divider"></div>
 
           <p class="invite">
             Mengundang Dengan Hormat, Menghadiri Syukuran Wisuda
             Kepada Bpk / Ibu / Sdr/i
           </p>
-<h3 class="guest-title">Tamu Undangan</h3>
 
-<p class="place">Kepada</p>
+          <h3 class="guest-title">Tamu Undangan</h3>
+          <p class="place">Kepada:</p>
+          <h3 class="guest-name" id="guestName">-</h3>
 
-<h3 class="guest-name" id="guestName">-</h3>
           <button class="btn-open" onclick="bukaUndangan()">
             Buka Undangan
           </button>
@@ -66,16 +63,17 @@
 
         <div class="image-frame">
           <div class="content">
-            <div class="text-container">
-              <h1 class="title2">Selamat Wisuda</h1>
+            <div class="text-container reveal">
 
-              <div class="line"></div>
+              <h1 class="title2 reveal-zoom">Selamat Wisuda</h1>
 
-              <p class="sub">Anak, Kakak & Adik Kami</p>
+              <div class="line reveal"></div>
 
-              <h2 class="name2">Astriani M. Rani, S.H</h2>
+              <p class="sub reveal">Anak, Kakak & Adik Kami</p>
 
-              <p class="desc">
+              <h2 class="name2 reveal">Astriani M. Rani, S.H</h2>
+
+              <p class="desc reveal">
                 Yang telah menyelesaikan pendidikan <br>
                 S1 Ilmu Hukum - Cum Laude <br>
                 di Universitas Khairun
@@ -92,14 +90,15 @@
     <section id="page3" class="page hidden-page">
       <div class="page3">
 
-        <div class="event-container">
+        <div class="event-container reveal">
 
-          <div class="icon-top">🔔</div>
+          <div class="icon-top reveal-zoom">🔔</div>
 
-          <p class="invite-text">You're Invited To:</p>
-          <h1 class="event-title">Graduation Ceremony</h1>
+          <p class="invite-text reveal">You're Invited To:</p>
 
-          <div class="event-info">
+          <h1 class="event-title reveal-zoom">Graduation Ceremony</h1>
+
+          <div class="event-info reveal">
             <div class="info-item">
               <span>📅 Sabtu, 11 April 2026</span>
             </div>
@@ -108,47 +107,86 @@
             </div>
           </div>
 
-      <div class="location">
+          <div class="location reveal">
 
-  <a href="https://www.google.com/maps?q=0.7959526181221008,127.37061309814453&z=17&hl=en" 
-     target="_blank" 
-     class="map-button">
+            <a href="https://www.google.com/maps?q=0.7959526181221008,127.37061309814453&z=17&hl=en" 
+               target="_blank" 
+               class="map-button reveal-zoom">
 
-    <img src="assets/peta.png" alt="Lokasi" class="map-img">
+              <img src="assets/peta.png" alt="Lokasi" class="map-img">
 
-  </a>
+            </a>
 
-  <h3>Kelurahan Moya</h3>
+            <h3>Kelurahan Moya</h3>
 
-</div>
+          </div>
 
-          <div class="divider2"></div>
-
+          <div class="divider2 reveal"></div>
 
           <!-- GRID -->
-         <div class="protocol-grid">
+          <div class="protocol-grid">
 
-  <div class="protocol-card">
-    <div class="protocol-icon">🥳</div>
-    <p>Datang & meriahkan</p>
-  </div>
+            <div class="protocol-card reveal">
+              <div class="protocol-icon">🥳</div>
+              <p>Datang & meriahkan</p>
+            </div>
 
-  <div class="protocol-card">
-    <div class="protocol-icon">📸</div>
-    <p>Foto sebanyaknya</p>
-  </div>
+            <div class="protocol-card reveal">
+              <div class="protocol-icon">📸</div>
+              <p>Foto sebanyaknya</p>
+            </div>
 
-  <div class="protocol-card">
-    <div class="protocol-icon">🎁</div>
-    <p>Bawa doa terbaik</p>
-  </div>
+            <div class="protocol-card reveal">
+              <div class="protocol-icon">🎁</div>
+              <p>Bawa doa terbaik</p>
+            </div>
 
-  <div class="protocol-card">
-    <div class="protocol-icon">❤️</div>
-    <p>Share kebahagiaan</p>
-  </div>
+            <div class="protocol-card reveal">
+              <div class="protocol-icon">❤️</div>
+              <p>Share kebahagiaan</p>
+            </div>
 
-</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= PAGE 4 ================= -->
+    <section id="page4" class="page hidden-page">
+      <div class="page4">
+
+        <div class="ucapan-container reveal">
+
+          <h2 class="ucapan-title reveal-zoom">
+            Berikan Doa Dan Ucapan Terbaik Anda
+          </h2>
+
+          <form class="ucapan-form reveal" id="ucapanForm">
+
+            <div class="row">
+              <div class="input-group">
+                <label>Nama Lengkap</label>
+                <input type="text" id="nama" placeholder="Nama Anda">
+              </div>
+
+              <div class="input-group">
+                <label>No. HP</label>
+                <input type="text" id="hp" placeholder="08xxxxxxxxxx">
+              </div>
+            </div>
+
+            <div class="input-group full">
+              <label>Kirim Ucapan & Doa</label>
+              <textarea id="ucapan" rows="4" placeholder="Tulis ucapan..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-kirim">
+              KIRIM UCAPAN
+            </button>
+
+          </form>
 
         </div>
 
@@ -156,44 +194,6 @@
     </section>
 
   </div>
-  <!-- ================= PAGE 4 ================= -->
-<section id="page4" class="page hidden-page">
-  <div class="page4">
-
-    <div class="ucapan-container">
-
-      <h2 class="ucapan-title">Berikan Doa Dan Ucapan Terbaik Anda</h2>
-
-    <form class="ucapan-form" id="ucapanForm">
-
-  <div class="row">
-    <div class="input-group">
-      <label>Nama Lengkap</label>
-      <input type="text" id="nama" placeholder="Nama Anda">
-    </div>
-
-    <div class="input-group">
-      <label>No. HP</label>
-      <input type="text" id="hp" placeholder="08xxxxxxxxxx">
-    </div>
-  </div>
-
-  <div class="input-group full">
-    <label>Kirim Ucapan & Doa</label>
-    <textarea id="ucapan" rows="4" placeholder="Tulis ucapan..."></textarea>
-  </div>
-
-  <button type="submit" class="btn-kirim">
-    KIRIM UCAPAN
-  </button>
-
-</form>
-
-    </div>
-
-  </div>
-</section>
-
 
   <!-- JS -->
   <script src="script.js"></script>
