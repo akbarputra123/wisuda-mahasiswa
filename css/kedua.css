@@ -36,7 +36,7 @@
   inset: 0;
 
   /* 🔥 gambar lebih kecil (tidak full zoom) */
-  background: url("/assets/foto.png") center no-repeat;
+  background: url("/assets/2.jpeg") center no-repeat;
   background-size: contain;
 
   /* ❌ hilangkan zoom berlebihan */

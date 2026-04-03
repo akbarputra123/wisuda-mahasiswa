@@ -79,3 +79,18 @@ Ucapan:%0A${ucapan}`;
   // buka WhatsApp
   window.open(url, "_blank");
 });
+
+document.querySelector(".btn-open").addEventListener("click", function () {
+  
+  // aktifkan scroll
+  document.body.classList.add("scroll-active");
+
+  // tampilkan page2
+  document.getElementById("page2").classList.remove("hidden-page");
+
+  // scroll halus ke page2
+  document.getElementById("page2").scrollIntoView({
+    behavior: "smooth"
+  });
+
+});
